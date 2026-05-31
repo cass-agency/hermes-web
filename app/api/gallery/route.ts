@@ -17,7 +17,8 @@ interface GalleryCard {
   sentAt: number;
 }
 
-export function addToGallery(card: GalleryCard) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function addToGallery(card: GalleryCard) {
   try {
     const existing: GalleryCard[] = fs.existsSync(GALLERY_FILE)
       ? JSON.parse(fs.readFileSync(GALLERY_FILE, "utf-8"))
